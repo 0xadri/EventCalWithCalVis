@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--  TODO: switch DTD to HTML4 ... at least -->
+
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		
+		<title>Demo CalVis 4</title>
+			
+		<link rel="stylesheet" type="text/css" media="all" href="./style.css" />
+
+		<script type="text/javascript" src="./jquery-1.6.1.min.js"></script>
+        <script type="text/javascript" src="./jquery-ui-1.7.2.custom.min.js"></script>   
+		
+		<script	src="http://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22gdata%22%2C%22version%22%3A%221%22%2C%22packages%22%3A%5B%22calendar%22%5D%7D%5D%7D&key=ABQIAAAAedBkXrK2yFsT6zhhwlSsCxQj9CErMmZjqOWZLXZytuBjMmwYpRRqRkUZAWLlaIaz_YNa5NTsC2PzhQ" type="text/javascript"></script>		
+		<script type="text/javascript" src="./calvis-core.js"></script>
+		<script type="text/javascript" src="./slide-out-feature.js"></script>
+
+    </head>
+
+    <body>
+		
+		<div class="event-cal-sliding-panel">
+	
+			<div id="calendar_column" class="mini_calendar">
+			
+				<div id="loginControlDiv"></div>
+					
+				<table>
+					<tr id="navControlTr" class="navControlTr">
+						<td valign="top" class="navControlTd">
+							<span id="navControlDiv"></span>
+							<span id="viewControlDiv"></span>
+						</td>
+					</tr>
+		
+					<tr align="center">
+						<td valign="top" class="calBody">
+							<div id="calendarBodyDiv"></div>
+						</td>
+					</tr>
+				</table>
+				
+				<div id="statusControlDiv"></div>
+				
+			</div>
+		
+			<div id="eventItemInList_model">
+				<div id="calEvent_Title"></div>
+				<div id="calEvent_TimeAndDate"></div>
+				<div id="calEvent_Location"></div>
+				<div id="calEvent_Description"></div>
+			</div>
+			
+			<div id="eventList_column">
+			
+			</div>	
+			
+		</div>
+	
+		<a class="trigger-event-cal-sliding-panel" href="#">Menu2</a>
+		
+    </body>
+
+</html>

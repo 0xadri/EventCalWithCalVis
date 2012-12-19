@@ -1,0 +1,73 @@
+/**
+ * Copyright 2008 Google Inc.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+CalVis4 is a fork CalVis3. CalVis4 is different from CalVis3 as it displays 
+the calendar along a list of the next 5 event in a left sliding-tab. Although
+this is a different use of the javascript from CalVis3, it does work very
+similarly and some improvement has been made on the code. See change list.
+
+CalVis3 is a fork of an apparently dormant project initiated by Austin Chau 
+who appears to be or have been a Google Employee. The project home page for 
+the original project is: http://code.google.com/p/calvis/
+
+The SVN repository (read-only) for the original project is available at
+http://calvis.googlecode.com/svn/trunk/
+
+
+TODO:
+
+ * Vertical alignment of calendar panel
+ * Vertical alignment of left tab
+ * Display of partial event description if description too long (thought I did it)
+
+
+Changes: 
+
+Nov, 2012 (Adrien Berthou)
+ * Calendar now in small format
+ * Display the next five event in events details panel
+ * Support display of event details: event location, time, and description
+ * Calendar with highlighted day means it has at least one event
+ * Calendar highlighted day is clickable
+ * When click on highlighted day, displays the next five events from this day
+ * Support for multi-day events
+ * Support for private google calendar
+ * Support for All Day events
+ * Support HTML in description field: ie. links
+ * Fixed end of month bug
+ * Replaced Google hosted copy of jQuery and gdata with local copies... can't remember why
+ might be a good idea to redo Eamonn Linehan's change
+ * Updated to jQuery version to version 1.6.1
+
+Jun 9, 2010 (Eamonn Linehan)
+  * Replaced dependencies on local copies of jQuery and gdata with Google hosted ones
+  * Made it possible to style events from different calendars differently
+  * Added limited support for multi-day events
+  * Better looking event display 
+
+May 23, 2010: 
+  * remove support for private calendars
+  * add support for multiple calendars
+
+May 5, 2010: 
+  * remove hard-coded google url in JS reference
+  * Better looking Month-view calendar display
+  * Add start time before title display
+  * Display more of the title, not ellipsis
+
+April 23, 2010: 
+  * replace jQuery version 1.3.2 with version 1.4.2

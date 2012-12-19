@@ -1,0 +1,229 @@
+
+
+/* GLOBAL CalVis SETUP ================================================================== */
+div, span, p, a, em, font, img, dl, dt, dd, label,
+table, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/* TRIGGER & SLIDING PANEL ================================================================== */
+
+a.trigger-event-cal-sliding-panel {
+	display: block;
+	position: fixed;
+	top: 323px;
+	left: 0;
+	width: 41px;
+	height: 174px;
+	text-indent: -1000em;
+	color: white;
+	background: url(./img/trigger-sliding-panel.png) no-repeat; 
+	outline: none;
+}
+
+a.active.trigger-event-cal-sliding-panel {
+	background-position: -41px 0;
+	z-index: 101;
+}
+
+.event-cal-sliding-panel {
+	display: none;
+	position: fixed;
+	overflow: hidden;
+	top: 60px;
+	left: -772px;
+	width: 682px;
+	height: 533px;
+	background: url(./img/bg-sliding-panel.gif) no-repeat right top;
+	padding: 13px 30px 13px 50px;
+	color: white;
+	font: normal 0.75em Arial, Helvetica, sans-serif;
+	z-index: 100;
+}
+
+
+/* SLIDING PANEL - MINI CALENDAR ============================================================ */
+
+div.event-cal-sliding-panel div#calendar_column.mini_calendar{
+	width: 190px;
+	float: left;
+	margin-top: 0px;
+}
+
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table { 
+	border:1px solid #dedede;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr#navControlTr.navControlTr{
+	text-align: center;
+}
+
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr#navControlTr.navControlTr td.navControlTd{
+	background-color: #426DB9;
+	padding: 3px;
+}
+
+
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr#navControlTr.navControlTr td.navControlTd span#navControlDiv {
+	font-family: Verdana;
+	font-size: 12px;
+	float: center;
+}
+
+/* Previous/next month buttons and year selection button*/
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr#navControlTr.navControlTr td.navControlTd span#navControlDiv input {	
+	border: solid #DDD270 1px;
+	width: 21px;
+	height: 21px;
+	border: none;
+	margin-top: 2px;
+	cursor:pointer;
+	cursor:hand;
+}
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr#navControlTr.navControlTr td.navControlTd span#navControlDiv input#prevMonth {
+	float: left;
+	background: url(./img/sprite-arrows.png) no-repeat right -39px;
+}
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr#navControlTr.navControlTr td.navControlTd span#navControlDiv input#nextMonth {
+	float: right;
+	background: url(./img/sprite-arrows.png) no-repeat right -6px;
+}
+
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr#navControlTr.navControlTr td.navControlTd span#navControlDiv select {
+	border: solid black 1px;
+	font-size: 12px;
+	cursor:pointer;
+	cursor:hand;
+}
+
+/* Mini Calendar body*/
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr td.calBody{
+	background-color: #809FC9; 
+	padding: 3px
+}
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr td.calBody div#calendarBodyDiv table{
+	border: 1px solid #809FC9;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr td.calBody div#calendarBodyDiv table tbody tr td.calColumnHeading {
+	text-align: center;
+	font-size: 12px;
+	color: white;
+	background-color: #3661B0;
+	border: solid #3661B0 1px;
+	padding: 3px;
+}
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr td.calBody div#calendarBodyDiv table tbody tr td.calColumnDate{
+	padding: 3px;
+}
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr td.calBody div#calendarBodyDiv table tbody tr td.calColumnDate div.monthViewCell {
+	width: 20px;
+	height: 14px;
+	border: none ;
+	text-align: center;
+	cursor:pointer;
+	cursor:hand;
+}
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr td.calBody div#calendarBodyDiv table tbody tr td.calColumnDate div.monthViewCell.today{
+	background-color: #A3C3F3;
+}
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr td.calBody div#calendarBodyDiv table tbody tr td.calColumnDate div.monthViewCell div.contentCell {	
+	font: normal 10px Verdana;
+	color: white;
+	border: solid black 0px;	
+	padding: 2px;
+	overflow: auto;
+	text-align: center;
+}
+div.event-cal-sliding-panel div#calendar_column.mini_calendar table tbody tr td.calBody div#calendarBodyDiv table tbody tr td.calColumnDate div.monthViewCell div.contentCellWithEvent{
+	font: bold 10px Verdana;
+	color: #225E9B;
+	border: solid black 0px;
+	padding: 2px;
+	overflow: auto;
+	text-align: center;
+}
+
+
+/* SLIDING PANEL - EVENT LISTING ============================================================ */
+
+div.event-cal-sliding-panel div#eventItemInList_model {
+	display:none;
+}
+.loadingCalendarEvents {
+	color: #CEE3F8;
+	font: bold 1em Arial, Helvetica, sans-serif;
+	margin: 160px auto;
+	width: 99px;
+	text-align: center;
+}
+div.event-cal-sliding-panel a{
+	text-decoration:none;
+}
+div.event-cal-sliding-panel a:hover{
+	text-decoration:underline;
+}
+div.event-cal-sliding-panel div#eventList_column {
+	width: 490px;
+	margin-left: 195px;
+	margin-top: -10px;
+	max-height: 539px;
+	overflow: hidden;
+}
+
+div.event-cal-sliding-panel div#eventList_column div.eventItemInList {
+	margin: 10px 5px 17px 5px;
+	border-top: solid 1px grey;
+	padding: 8px 0 0 10px;	
+	min-height: 44px;
+}
+
+div.event-cal-sliding-panel div#eventList_column div.eventItemInList div.calEvent_Title{
+	color: #CEE3F8;
+	font: bold 1.2em Arial, Helvetica, sans-serif;
+	width: 287px;
+	float: left;
+}
+div.event-cal-sliding-panel div#eventList_column div.eventItemInList div.calEvent_Title  a{
+	color: #CEE3F8;
+	font: bold 1em Arial, Helvetica, sans-serif;
+	width: 287px;
+	float: left;
+}
+div.event-cal-sliding-panel div#eventList_column div.eventItemInList div.calEvent_TimeAndDate{
+	float: right;
+	width: 182px;
+	text-align: right;
+	color: #A9D0F5;
+	font: 11.5px Arial, Helvetica, sans-serif;
+}
+div.event-cal-sliding-panel div#eventList_column div.eventItemInList div.calEvent_Location{				
+	float: right;
+	font: 11.5px Arial, Helvetica, sans-serif;
+	color: #A9D0F5;
+}
+div.event-cal-sliding-panel div#eventList_column div.eventItemInList div.calEvent_Location a{				
+	float: right;
+	font: 11.5px Arial, Helvetica, sans-serif;
+	color: #A9D0F5;
+}
+div.event-cal-sliding-panel div#eventList_column div.eventItemInList div.calEvent_Description{
+	margin-top: 33px;
+}
+div.event-cal-sliding-panel div#eventList_column div.eventItemInList div#calEvent_Description{
+	display: inline-block;
+}
+div.event-cal-sliding-panel div#eventList_column div.eventItemInList div.calEvent_Description a{
+	color: white;
+	font: normal 1em Arial, Helvetica, sans-serif;
+}
+
